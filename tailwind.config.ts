@@ -24,7 +24,16 @@ const config: Config = {
       fontFamily: {
         sans: 'var(--font-sans)',
         serif: 'var(--font-serif)',
-      }
+      },
+      keyframes: {
+        scroll: {
+          '0%': { transform: 'translateX(100%)' },
+          '100%': { transform: 'translateX(-100%)' },
+        },
+      },
+      animation: {
+        scroll: 'scroll 20s linear infinite',
+      },
     },
   },
   plugins: [],
