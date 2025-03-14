@@ -65,7 +65,7 @@ export const HeroSection = () => {
           />
           <div className="inline-flex items-center gap-2 rounded-lg border border-gray-800 px-4 py-1.5 bg-gray-950">
             <div className="bg-green-500 size-2.5 rounded-full"></div>
-            <span className="text-sm font-medium">Available for new projects</span>
+            <span className="text-sm font-medium">Open to new opportunities</span>
           </div>
         </div>
 

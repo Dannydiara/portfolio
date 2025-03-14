@@ -12,6 +12,18 @@ const words = [
   "Maintainable",
   "User Friendly",
   "Scalable",
+  "Fast",
+  "Modern",
+  "Intuitive",
+  "Engaging",
+  "Innovative",
+  "Dynamic",
+  "Robust",
+  "Efficient",
+  "Effective",
+  "Creative",
+  "Attractive",
+  "Modern",
 ]
 
 export const TapeSection = () => {

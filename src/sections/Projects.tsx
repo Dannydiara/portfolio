@@ -5,75 +5,65 @@ import Image from 'next/image';
 import CheckCircleIcon from "@/assets/icons/check-circle.svg";
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
 import grainImage from "@/assets/images/grain.jpg";
+import { SectionHeader } from "@/components/SectionHeader";
+import { Card } from "@/components/Card";
+import bankLandPage from "@/assets/images/bank-landing-page.png";
+import eCommerce from "@/assets/images/e-commerce.png";
+import photographyLocation from "@/assets/images/photography-location-booking.png";
 
 const portfolioProjects = [
   {
-    company: "Acme Corp",
-    year: "2022",
-    title: "Dark Saas Landing Page",
-    results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
-    ],
-    link: "https://youtu.be/4k7IdSLxh6w",
-    image: darkSaasLandingPage,
-  },
-  {
-    company: "Innovative Co",
-    year: "2021",
-    title: "Light Saas Landing Page",
-    results: [
-      { title: "Boosted sales by 20%" },
-      { title: "Expanded customer reach by 35%" },
-      { title: "Increased brand awareness by 15%" },
-    ],
-    link: "https://youtu.be/7hi5zwO75yc",
-    image: lightSaasLandingPage,
-  },
-  {
-    company: "Quantum Dynamics",
+    company: "HooBank",
     year: "2023",
-    title: "AI Startup Landing Page",
+    title: "Modern Banking Platform",
     results: [
       { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
+      { title: "Optimized performance by 50%" },
       { title: "Increased mobile traffic by 35%" },
     ],
-    link: "https://youtu.be/Z7I5uSRHMHg",
-    image: aiStartupLandingPage,
+    link: "https://modern-bank-app-sigma-silk.vercel.app/",
+    image: bankLandPage,
+  },
+  {
+    company: "Taht Istanbul",
+    year: "2024",
+    title: "Rooftop Photography Studio",
+    results: [
+      { title: "Enhanced online presence" },
+      { title: "Increased customer engagement" },
+      { title: "Expanded market reach" },
+    ],
+    link: "https://tahtistanbul.vercel.app/",
+    image: photographyLocation,
+  },
+  {
+    company: "E-Commerce",
+    year: "2022",
+    title: "Modern E-Commerce Website",
+    results: [
+      { title: "Optimized for seamless shopping experience" },
+      { title: "Boosted site speed for faster transactions" },
+      { title: "Increased mobile responsiveness" },
+    ],
+    link: "https://e-commerce-website-delta-blond.vercel.app/",
+    image: eCommerce,
   },
 ];
 
 export const ProjectsSection = () => {
   return <section className="pb-16 lg:py-24">
     <div className="container">
-      <div className="flex justify-center">
-        <p className="uppercase font-semibold tracking-widest bg-gradient-to-r 
-          from-emerald-300 to-sky-400 text-center text-transparent 
-          bg-clip-text"
-        >
-          Real-world Results
-        </p>
-      </div>
-      <h2 className="font-serif text-3xl md:text-5xl text-center mt-6">
-        Code That Connects
-      </h2>
-      <p className="text-center md:text-lg lg:text-xl text-white/60 mt-4 max-w-md mx-auto">
-        Designing experiences that turn concepts into compelling digital stories.
-      </p>
+      <SectionHeader
+        eyebrow="Real-world Results"
+        title="Code That Connects"
+        description="Designing experiences that turn concepts into compelling digital stories."
+      />
       <div className="flex flex-col mt-10 md:mt-20 gap-20">
         {portfolioProjects.map((project, index) => (
-          <div 
+          <Card 
             key={project.title} 
-            className="bg-gray-800 rounded-3xl relative after:content-[''] z-0 overflow-hidden after:z-10 after:absolute after:inset-0 after:outline-2 after:-outline-offset-2 after:rounded-3xl after:outline-white/20 px-8 pt-8 md:pt-12 md:px-10 lg:pt-16 lg:px-20 after:pointer-events-none"
+            className="px-8 pt-8 pb-0 md:pt-12 md:px-10 lg:pt-16 lg:px-20"
           >
-            <div 
-              className="absolute inset-0 -z-10 opacity-5" 
-              style={{
-                backgroundImage: `url(${grainImage.src})`,
-              }}
-            ></div>
             <div className="lg:grid lg:grid-cols-2 lg:gap-16">
               <div className="lg:pb-16">
                 <div className="bg-gradient-to-r from-emerald-300 to-sky-400 inline-flex gap-2 font-bold uppercase tracking-widest text-sm text-transparent bg-clip-text">
@@ -93,7 +83,7 @@ export const ProjectsSection = () => {
                 </ul>
                 <a href={project.link}>
                   <button className="bg-white text-gray-950 h-12 w-full md:w-auto px-6 rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8">
-                    <span>View Project</span>
+                    <span>Check It Out</span>
                     <ArrowUpRightIcon className="size-4" />
                   </button>
                 </a>
@@ -106,7 +96,7 @@ export const ProjectsSection = () => {
                 />
               </div>
             </div>
-          </div>
+          </Card>
         ))}
       </div>
     </div>
