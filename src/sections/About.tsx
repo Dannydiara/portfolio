@@ -3,7 +3,7 @@ import { SectionHeader } from "@/components/SectionHeader";
 import { TechIcon } from "@/components/TechIcon";
 import Image from "next/image";
 import bookImage from "@/assets/images/book-cover.png";
-import smileMemoji from "@/assets/images/memoji-smile.png";
+import memojiImage from "@/assets/images/memoji-computer1.png";
 import Bootstrap from "@/assets/icons/bootstrap.svg";
 import Chrome from "@/assets/icons/chrome.svg";
 import CSS3 from "@/assets/icons/css3.svg";
@@ -220,7 +220,7 @@ export const AboutSection = () => {
             </Card>
             <Card>
               <Image src={mapImage} alt="Map" />
-              <Image src={smileMemoji} alt="Smiling memoji" />
+              <Image src={memojiImage} alt="Smiling memoji" />
             </Card>
           </div>
         </div>
