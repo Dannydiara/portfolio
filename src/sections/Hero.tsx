@@ -10,8 +10,8 @@ export const HeroSection = () => {
   return (
     <div className="py-32 md:py-48 lg:py-56 relative z-0 overflow-x-clip">
       <div className="absolute inset-0 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)]">
-        <div 
-          className="absolute inset-0 opacity-5 -z-10" 
+        <div
+          className="absolute inset-0 opacity-5 -z-10"
           style={{ backgroundImage: `url(${grainImage.src})` }}
         />
         <div className="size-[630px] md:size-[700px] hero-ring"></div>
@@ -58,24 +58,33 @@ export const HeroSection = () => {
       <div className="container flex flex-col items-center gap-8">
         {/* Badge Section */}
         <div className="flex flex-col items-center">
-          <Image 
-            src={memojiImage} 
+          <Image
+            src={memojiImage}
             className="size-[120px] md:size-[140px]"
-            alt="Person sitting behind laptop" 
+            alt="Person sitting behind laptop"
           />
           <div className="inline-flex items-center gap-2 rounded-lg border border-gray-800 px-4 py-1.5 bg-gray-950">
-            <div className="bg-green-500 size-2.5 rounded-full"></div>
-            <span className="text-sm font-medium">Open to new opportunities</span>
+            <div className="bg-green-500 size-2.5 rounded-full relative">
+              <div className="bg-green-500 absolute flex justify-center inset-0 rounded-full animate-ping"></div>
+            </div>
+            <span className="text-sm font-medium">
+              Open to new opportunities
+            </span>
           </div>
         </div>
 
         {/* Heading Section */}
         <div className="max-w-2xl mx-auto space-y-6">
           <h1 className="font-serif text-3xl text-center md:text-5xl tracking-tight">
-            Building Exceptional<br />User Experiences
+            Building Exceptional
+            <br />
+            User Experiences
           </h1>
           <p className="text-center text-white/60 md:text-md mt-4">
-            Passionate front-end developer skilled in creating intuitive, visually stunning interfaces. Detail-oriented and problem-solving-driven, I turn ideas into seamless digital experiences.
+            Passionate front-end developer skilled in creating intuitive,
+            visually stunning interfaces. Detail-oriented and
+            problem-solving-driven, I turn ideas into seamless digital
+            experiences.
           </p>
         </div>
 
@@ -92,5 +101,5 @@ export const HeroSection = () => {
         </div>
       </div>
     </div>
-  )
+  );
 };

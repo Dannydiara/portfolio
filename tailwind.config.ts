@@ -30,9 +30,14 @@ const config: Config = {
           '0%': { transform: 'translateX(100%)' },
           '100%': { transform: 'translateX(-100%)' },
         },
+        'ping-large': {
+          '75%': { transform: 'scale(3)', opacity: 0 },
+          '100%': { transform: 'scale(3)', opacity: 0 },
+        },
       },
       animation: {
         scroll: 'scroll 20s linear infinite',
+        'ping-large': 'ping-large 1s ease-in-out infinite',
       },
     },
   },
