@@ -17,9 +17,9 @@ const portfolioProjects = [
     year: "2023",
     title: "Modern Banking Platform",
     results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Optimized performance by 50%" },
-      { title: "Increased mobile traffic by 35%" },
+      { title: "Enhanced user experience" },
+      { title: "Optimized performance" },
+      { title: "Increased mobile traffic" },
     ],
     link: "https://modern-bank-app-sigma-silk.vercel.app/",
     image: bankLandPage,
@@ -60,10 +60,13 @@ export const ProjectsSection = () => {
           description="Designing experiences that turn concepts into compelling digital stories."
         />
         <div className="flex flex-col mt-10 md:mt-20 gap-20">
-          {portfolioProjects.map((project, index) => (
+          {portfolioProjects.map((project, projectIndex) => (
             <Card
               key={project.title}
-              className="px-8 pt-8 pb-0 md:pt-12 md:px-10 lg:pt-16 lg:px-20"
+              className="px-8 pt-8 pb-0 md:pt-12 md:px-10 lg:pt-16 lg:px-20 sticky" 
+              style={{
+                top: `calc(64px + ${projectIndex * 20}px)`,
+              }}
             >
               <div className="lg:grid lg:grid-cols-2 lg:gap-16">
                 <div className="lg:pb-16">

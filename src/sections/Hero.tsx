@@ -23,35 +23,84 @@ export const HeroSection = () => {
         <div className="size-[1700px] hero-ring"></div>
 
         {/* Rotating Stars */}
-        <HeroOrbit size={820} rotation={-72} duration={1300}>
-          <StarIcon className="size-28 text-emerald-300 animate-spin [animation-duration:68s]" />
-        </HeroOrbit>
-        <HeroOrbit size={590} rotation={20} duration={1600}>
-          <StarIcon className="size-12 text-emerald-300 animate-spin [animation-duration:52s]" />
-        </HeroOrbit>
-        <HeroOrbit size={610} rotation={98} duration={1500}>
-          <StarIcon className="size-8 text-emerald-300 animate-spin [animation-duration:48s]" />
-        </HeroOrbit>
-        <HeroOrbit size={450} rotation={-14} duration={1800}>
+        <HeroOrbit
+          size={450}
+          rotation={-14}
+          shouldOrbit
+          orbitDuration="40s"
+          shouldSpin
+          spinDuration="4s"
+        >
           <SparkleIcon className="size-8 text-emerald-300/20 animate-spin [animation-duration:48s]" />
         </HeroOrbit>
-        <HeroOrbit size={460} rotation={79} duration={1800}>
+        <HeroOrbit
+          size={460}
+          rotation={79}
+          shouldOrbit
+          orbitDuration="42s"
+          shouldSpin
+          spinDuration="4s"
+        >
           <SparkleIcon className="size-5 text-emerald-300/20 animate-spin [animation-duration:20s]" />
         </HeroOrbit>
-        <HeroOrbit size={550} rotation={178} duration={1600}>
+        <HeroOrbit size={540} rotation={-41} shouldOrbit orbitDuration="44s">
+          <div className="size-2 rounded-full bg-emerald-300/20" />
+        </HeroOrbit>
+        <HeroOrbit
+          size={550}
+          rotation={178}
+          shouldOrbit
+          orbitDuration="46s"
+          shouldSpin
+          spinDuration="4s"
+        >
           <SparkleIcon className="size-10 text-emerald-300/20 animate-spin [animation-duration:50s]" />
         </HeroOrbit>
-        <HeroOrbit size={730} rotation={144} duration={1300}>
+        <HeroOrbit
+          size={590}
+          rotation={20}
+          shouldOrbit
+          orbitDuration="48s"
+          shouldSpin
+          spinDuration="8s"
+        >
+          <StarIcon className="size-12 text-emerald-300 animate-spin [animation-duration:52s]" />
+        </HeroOrbit>
+        <HeroOrbit
+          size={610}
+          rotation={98}
+          shouldOrbit
+          orbitDuration="50s"
+          shouldSpin
+          spinDuration="8s"
+        >
+          <StarIcon className="size-8 text-emerald-300 animate-spin [animation-duration:48s]" />
+        </HeroOrbit>
+        <HeroOrbit size={670} rotation={-5} shouldOrbit orbitDuration="52s">
+          <div className="size-2 rounded-full bg-emerald-300/20" />
+        </HeroOrbit>
+        <HeroOrbit
+          size={730}
+          rotation={144}
+          shouldOrbit
+          orbitDuration="54s"
+          shouldSpin
+          spinDuration="4s"
+        >
           <SparkleIcon className="size-14 text-emerald-300/20 animate-spin [animation-duration:54s]" />
         </HeroOrbit>
-        <HeroOrbit size={740} rotation={85} duration={1400}>
+        <HeroOrbit size={740} rotation={85} shouldOrbit orbitDuration="56s">
           <div className="size-3 rounded-full bg-emerald-300/20" />
         </HeroOrbit>
-        <HeroOrbit size={540} rotation={-41} duration={1600}>
-          <div className="size-2 rounded-full bg-emerald-300/20" />
-        </HeroOrbit>
-        <HeroOrbit size={670} rotation={-5} duration={1500}>
-          <div className="size-2 rounded-full bg-emerald-300/20" />
+        <HeroOrbit
+          size={820}
+          rotation={-72}
+          shouldOrbit
+          orbitDuration="58s"
+          shouldSpin
+          spinDuration="8s"
+        >
+          <StarIcon className="size-28 text-emerald-300 animate-spin [animation-duration:68s]" />
         </HeroOrbit>
       </div>
 
@@ -65,7 +114,7 @@ export const HeroSection = () => {
           />
           <div className="inline-flex items-center gap-2 rounded-lg border border-gray-800 px-4 py-1.5 bg-gray-950">
             <div className="bg-green-500 size-2.5 rounded-full relative">
-              <div className="bg-green-500 absolute flex justify-center inset-0 rounded-full animate-ping"></div>
+              <div className="bg-green-500 absolute flex justify-center inset-0 rounded-full animate-ping-large"></div>
             </div>
             <span className="text-sm font-medium">
               Open to new opportunities

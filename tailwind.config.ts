@@ -27,17 +27,14 @@ const config: Config = {
       },
       keyframes: {
         scroll: {
-          '0%': { transform: 'translateX(100%)' },
-          '100%': { transform: 'translateX(-100%)' },
-        },
-        'ping-large': {
-          '75%': { transform: 'scale(3)', opacity: 0 },
-          '100%': { transform: 'scale(3)', opacity: 0 },
+          '0%': { transform: "translateX(100%)" },
+          '100%': { transform: "translateX(-100%)" },
         },
       },
       animation: {
-        scroll: 'scroll 20s linear infinite',
-        'ping-large': 'ping-large 1s ease-in-out infinite',
+        scroll: "scroll 20s linear infinite",
+        "ping-large": "ping-large 1s cubic-bezier(0, 0, 0.2, 1) infinite",
+        'move-left': 'move-left 20s linear infinite',
       },
     },
   },
