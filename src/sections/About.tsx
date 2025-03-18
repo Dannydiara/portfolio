@@ -1,6 +1,10 @@
+"use client"
+
 import { Card } from "@/components/Card";
+import { CardHeader } from "@/components/CardHeader";
 import { SectionHeader } from "@/components/SectionHeader";
-import { TechIcon } from "@/components/TechIcon";
+import { ToolboxItems } from "@/components/ToolboxItems";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import bookImage from "@/assets/images/book-cover.png";
 import memojiImage from "@/assets/images/memoji-computer1.png";
@@ -17,13 +21,11 @@ import Next from "@/assets/icons/nextjs.svg";
 import Prisma from "@/assets/icons/prisma.svg";
 import React from "@/assets/icons/react.svg";
 import Redux from "@/assets/icons/redux.svg";
-import StarIcon from "@/assets/icons/star.svg";
 import Tailwind from "@/assets/icons/tailwind.svg";
 import TypeScript from "@/assets/icons/typescript.svg";
 import Vercel from "@/assets/icons/vercel.svg";
 import VSCode from "@/assets/icons/vscode.svg";
-import { CardHeader } from "@/components/CardHeader";
-import { ToolboxItems } from "@/components/ToolboxItems";
+import { useRef } from "react";
 
 const toolboxItems = [
   {
@@ -162,6 +164,7 @@ const hobbies = [
 ];
 
 export const AboutSection = () => {
+  const constraintRef = useRef(null);
   return (
     <div>
       <div className="py-20 lg:py-28">
@@ -188,11 +191,15 @@ export const AboutSection = () => {
                   description="Explore the technologies and tools I use to craft exceptional digital experiences"
                   className=""
                 />
-                <ToolboxItems items={toolboxItems} className="" />
+                <ToolboxItems
+                  items={toolboxItems}
+                  className=""
+                  itemsWrapperClassName="animate-marquee-left [animation-duration:30s]"
+                />
                 <ToolboxItems
                   items={toolboxItems}
                   className="mt-6"
-                  itemsWrapperClassName="-translate-x-1/2"
+                  itemsWrapperClassName="animate-marquee-right [animation-duration:18s]"
                 />
               </Card>
             </div>
@@ -203,21 +210,24 @@ export const AboutSection = () => {
                   description="Explore my interests and hobbies beyond the digital realm"
                   className="px-6 py-6"
                 />
-                <div className="relative flex-1">
+                <div ref={constraintRef} className="relative flex-1">
                   {hobbies.map((hobby) => (
-                    <div
+                    <motion.div
                       key={hobby.title}
-                      className="inline-flex items-center gap-2 px-6 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-full py-1.5 absolute"
+                      className="inline-flex items-center gap-2 px-6 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-full py-1.5 absolute cursor-grab"
                       style={{
                         left: hobby.left,
                         top: hobby.top,
                       }}
+                      drag
+                      dragConstraints={constraintRef}
+                      
                     >
                       <span className="font-medium text-gray-950">
                         {hobby.title}
                       </span>
                       <span>{hobby.emoji}</span>
-                    </div>
+                    </motion.div>
                   ))}
                 </div>
               </Card>
@@ -227,7 +237,9 @@ export const AboutSection = () => {
                   alt="Map"
                   className="h-full object-cover object-left-top"
                 />
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-20 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400 after:content-[''] after:absolute after:inset-0 after:outline-2 after:rounded-full after:-outline-gray-950/30">
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-20 after:content-[''] after:absolute after:inset-0 after:outline-2 after:rounded-full after:-outline-gray-950/30">
+                  <div className="absolute inset-0 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400 -z-20 animate-ping [animation-duration:2s]"></div>
+                  <div className="absolute inset-0 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400 -z-10"></div>
                   <Image
                     src={memojiImage}
                     alt="Smiling memoji"

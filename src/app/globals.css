@@ -51,21 +51,52 @@
 }
 
 @keyframes ping-large {
-  75%,
-  100% {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  75%, 100% {
     transform: scale(3);
     opacity: 0;
   }
 }
 
+.animate-ping-large {
+  animation: ping-large 1s ease-in-out infinite;
+}
+
 @keyframes move-left {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+
+@layer components {
+  .animate-marquee-left {
+    animation-name: move-left;
+    animation-duration: 1s; /* default duration */
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
   }
 }
+
+@keyframes move-right {
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
+}
+
+
+@layer components {
+  .animate-marquee-right {
+    animation-name: move-right;
+    animation-duration: 1s; /* default duration */
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+}
+
+
+
 
 /*
   ---break---

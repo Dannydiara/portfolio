@@ -112,9 +112,14 @@ export const HeroSection = () => {
             className="size-[120px] md:size-[140px]"
             alt="Person sitting behind laptop"
           />
-          <div className="inline-flex items-center gap-2 rounded-lg border border-gray-800 px-4 py-1.5 bg-gray-950">
-            <div className="bg-green-500 size-2.5 rounded-full relative">
-              <div className="bg-green-500 absolute flex justify-center inset-0 rounded-full animate-ping-large"></div>
+          <div className="inline-flex items-center gap-4 rounded-lg border border-gray-800 px-4 py-1.5 bg-gray-950">
+            <div className="relative size-2.5">
+              {/* Ping element container */}
+              <div className="absolute inset-0 animate-ping-large">
+                <div className="w-full h-full bg-green-500 rounded-full" />
+              </div>
+              {/* Static dot */}
+              <div className="bg-green-500 size-2.5 rounded-full" />
             </div>
             <span className="text-sm font-medium">
               Open to new opportunities

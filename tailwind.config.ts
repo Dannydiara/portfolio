@@ -30,11 +30,19 @@ const config: Config = {
           '0%': { transform: "translateX(100%)" },
           '100%': { transform: "translateX(-100%)" },
         },
+        pingLarge: {
+          "0%": { transform: "scale(1)", opacity: "1" },
+          "75%, 100%": { transform: "scale(3)", opacity: "0" },
+        },
+        "move-left": {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(-100%)" },
+        },
       },
       animation: {
         scroll: "scroll 20s linear infinite",
-        "ping-large": "ping-large 1s cubic-bezier(0, 0, 0.2, 1) infinite",
-        'move-left': 'move-left 20s linear infinite',
+        'ping-large': 'ping-large 1s cubic-bezier(0, 0, 0.2, 1) infinite',
+        "move-left": "move-left 10s linear infinite",
       },
     },
   },
