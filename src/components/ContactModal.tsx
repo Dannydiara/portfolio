@@ -29,7 +29,7 @@ export const ContactModal = () => {
     <Dialog.Root>
       {/* Trigger Button - Keep your original style */}
       <Dialog.Trigger asChild>
-        <button className="text-white bg-gray-900 inline-flex items-center px-6 h-12 rounded-xl gap-2 w-max border border-gray-900 hover:bg-white/70 hover:text-gray-900 transition-colors">
+        <button className="text-white bg-gray-900 inline-flex items-center px-6 h-12 rounded-xl gap-2 w-max border border-gray-900 hover:bg-white/70 hover:text-gray-900 transition duration-300">
           <span className="font-semibold">Contact Me</span>
           <ArrowUpRightIcon className="size-4" />
         </button>
