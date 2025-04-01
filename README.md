@@ -169,7 +169,9 @@ Vercel automatically builds and deploys the site
 ## Contributing
 
 Contributions are welcome! Please follow these guidelines:
+```bash
 Fork the repository
 Create a new branch for your feature
 Make your changes and ensure tests pass
 Submit a pull request with detailed description
+```
