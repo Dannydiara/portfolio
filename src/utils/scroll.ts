@@ -5,5 +5,6 @@ export const smoothScroll = (id: string) => {
       behavior: 'smooth',
       block: 'start'
     });
+    window.history.pushState(null, "", `#${id}`);
   }
 };

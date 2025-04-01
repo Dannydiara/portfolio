@@ -1,3 +1,5 @@
+'use client';
+
 import memojiImage from "@/assets/images/memoji-computer1.png";
 import ArrowDown from "@/assets/icons/arrow-down.svg";
 import { HeroOrbit } from "@/components/HeroOrbit";
@@ -5,10 +7,14 @@ import Image from "next/image";
 import grainImage from "@/assets/images/grain.jpg";
 import StarIcon from "@/assets/icons/star.svg";
 import SparkleIcon from "@/assets/icons/sparkle.svg";
+import { smoothScroll } from "@/utils/scroll";
 
 export const HeroSection = () => {
   return (
-    <div id="home" className="py-32 md:py-48 lg:py-56 relative z-0 overflow-x-clip">
+    <div
+      id="home"
+      className="py-32 md:py-48 lg:py-56 relative z-0 overflow-x-clip"
+    >
       <div className="absolute inset-0 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)]">
         <div
           className="absolute inset-0 opacity-5 -z-10"
@@ -143,12 +149,18 @@ export const HeroSection = () => {
         </div>
 
         {/* Buttons */}
-        <div className="flex flex-col md:flex-row justify-center gap-4 mt-4">
-          <button className="flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl hover:bg-white/5 transition-colors">
+        <div className="flex flex-col md:flex-row justify-center z-0 gap-4 mt-4">
+          <button
+            className="flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl hover:cursor-pointer hover:bg-white/5 transition-colors"
+            onClick={() => smoothScroll("projects")}
+          >
             <span className="font-semibold text-sm">Explore My Creation</span>
             <ArrowDown className="size-4" />
           </button>
-          <button className="flex items-center gap-2 border border-white bg-white text-gray-900 px-6 h-12 rounded-xl hover:bg-gray-100 transition-colors">
+          <button
+            className="flex items-center gap-2 border border-white bg-white text-gray-900 px-6 h-12 rounded-xl hover:cursor-pointer hover:bg-gray-100 transition-colors"
+            onClick={() => smoothScroll("contact")}
+          >
             <span>👋🏾</span>
             <span className="font-semibold text-sm">Get in Touch</span>
           </button>
