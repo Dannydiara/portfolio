@@ -160,11 +160,13 @@ Emoji integration for visual appeal
 ## Deployment
 
 The portfolio is deployed on Vercel, leveraging its automatic deployment features and global CDN for optimal performance.
+```bash
 Deployment Steps
 Push code to GitHub repository
 Connect repository to Vercel
 Configure environment variables in Vercel dashboard
 Vercel automatically builds and deploys the site
+```
 
 ## Contributing
 
