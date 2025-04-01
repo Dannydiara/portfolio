@@ -70,12 +70,13 @@ npm run dev
 Environment Variables
 Create a .env.local file in the root directory and add:
 
+```bash
 RESEND_API_KEY=your_resend_api_key
 YOUR_EMAIL=your_email@example.com
-
-
+```
 ## Project Structure
 
+```bash
 portfolio-site/
 ├── .next/
 ├── .vscode/
@@ -110,6 +111,7 @@ portfolio-site/
 ├── README.md
 ├── tailwind.config.js
 └── tsconfig.json
+```
 
 ## Key Features
 
@@ -137,6 +139,7 @@ External links to live demos
 Custom navigation with smooth scrolling behavior:
 Fixed header with scroll animation
 Smooth transitions between sections
+```bash
 export const smoothScroll = (id: string) => {
   const element = document.getElementById(id);
   if (element) {
@@ -146,6 +149,7 @@ export const smoothScroll = (id: string) => {
     });
   }
 };
+```
 6. Interactive Hobbies Section
 An engaging hobbies section with:
 Draggable hobby tags using Framer Motion
