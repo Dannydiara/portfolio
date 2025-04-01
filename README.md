@@ -65,6 +65,7 @@ npm install
 
 # Start the development server
 npm run dev
+```
 
 Environment Variables
 Create a .env.local file in the root directory and add:
@@ -168,4 +169,3 @@ Fork the repository
 Create a new branch for your feature
 Make your changes and ensure tests pass
 Submit a pull request with detailed description
-```
