@@ -166,7 +166,7 @@ const hobbies = [
 export const AboutSection = () => {
   const constraintRef = useRef(null);
   return (
-    <div>
+    <div id="about">
       <div className="py-20 lg:py-28">
         <div className="container">
           <SectionHeader
