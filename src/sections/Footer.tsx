@@ -11,7 +11,7 @@ const footerLinks = [
   },
   {
     title: "Instagram",
-    href: "#",
+    href: "https://www.instagram.com/danny_diara/",
   },
   {
     title: "Twitter",
